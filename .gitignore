@@ -1,0 +1,30 @@
+# Java
+sdk-java/target/
+*.class
+*.jar
+*.war
+*.log
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+
+# Node.js
+sdk-nodejs/node_modules/
+sdk-nodejs/package-lock.json
+
+# Python
+__pycache__/
+*.egg-info/
+sdk-python/dist/
+sdk-python/build/
+*.pyc
+
+# IDE
+.vscode/
+*.swp
+*.swo
+
+# HWP test files (private)
+*.hwp

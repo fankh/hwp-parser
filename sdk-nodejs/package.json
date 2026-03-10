@@ -1,0 +1,15 @@
+{
+  "name": "hwp-parser",
+  "version": "1.0.0",
+  "description": "HWP 5.0 바이너리 문서 파서",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": ["hwp", "hancom", "parser", "korean", "document"],
+  "license": "MIT",
+  "dependencies": {
+    "cfb": "^1.2.2"
+  }
+}
