@@ -144,17 +144,17 @@ REST API가 필요한 경우 서버를 별도로 실행할 수 있습니다.
 
 ### 요구사항
 
-- Java 17 이상
-- Maven 3.8 이상
+- Python 3.10 이상
 
-### 실행
+### 설치 및 실행
 
 ```bash
 cd server
-mvn spring-boot:run
+pip install -r requirements.txt
+python app.py
 ```
 
-서버가 `http://localhost:8080`에서 시작됩니다.
+서버가 `http://localhost:8080`에서 시작됩니다. `PORT` 환경변수로 포트를 변경할 수 있습니다.
 
 ### API 엔드포인트
 
@@ -163,6 +163,18 @@ mvn spring-boot:run
 | `POST` | `/api/v1/hwp/parse` | HWP 파일을 파싱하여 전체 JSON 구조 반환 |
 | `POST` | `/api/v1/hwp/extract-text` | HWP 파일에서 텍스트만 추출 |
 | `GET`  | `/api/v1/hwp/health` | 서버 상태 확인 |
+
+### 사용 예시
+
+```bash
+# 전체 파싱
+curl -X POST http://localhost:8080/api/v1/hwp/parse \
+  -F "file=@document.hwp"
+
+# 텍스트만 추출
+curl -X POST http://localhost:8080/api/v1/hwp/extract-text \
+  -F "file=@document.hwp"
+```
 
 ## HWP 5.0 포맷
 
